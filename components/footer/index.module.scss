@@ -1,0 +1,55 @@
+.container {
+  margin: 0 82px 559px 83px;
+  text-align: center;
+
+  .horizontal {
+    height: 1px;
+    top: calc(50% - 1px/2 - 79px);
+    border: 1px solid #585858;
+    box-sizing: border-box;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: space-around;
+    margin: 33px 308px 32px 307px;
+    font-family: "Abel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #585858;
+  }
+   
+  .share {
+    display: felx;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+   
+    .item {
+      width:16.5%;
+      display: flex;
+      .icon {
+        width: 30px;
+        height: 30px;
+         
+      }
+      .vertical {
+        width: 1px;
+        left: calc(50% - 1px/2 - 425.66px);    
+        border: 1px solid #585858;
+        box-sizing: border-box;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+        margin-left: 15px;
+      }
+    }
+
+    
+  }
+
+  
+}
