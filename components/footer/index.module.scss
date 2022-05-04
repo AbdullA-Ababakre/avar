@@ -25,31 +25,30 @@
   }
    
   .share {
-    display: felx;
-    flex-direction: row;
+    display: flex;
     flex-wrap: nowrap;
-    justify-content:space-around;
+    justify-content: space-around;
    
     .item {
-      width:16.5%;
       display: flex;
+      margin-right: 0;
+      align-items: center;
+      padding: 31px 0;
+
       .icon {
         width: 30px;
         height: 30px;
-         
       }
+
       .vertical {
         width: 1px;
-        left: calc(50% - 1px/2 - 425.66px);    
+        height: 85px; 
+        margin-left: 90px;
         border: 1px solid #585858;
         box-sizing: border-box;
         box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
-        margin-left: 15px;
       }
     }
-
-    
   }
-
-  
 }
+
