@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+  padding: 148px 96px 0;
+
+  .logoContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .logoLeft {
+      position: absolute;
+      width: 83px;
+      height: 126px;
+      left: 96px;
+    }
+
+    .logoRight {
+      position: absolute;
+      width: 466px;
+      height: 199px;
+      right: 96px;
+    }
+  }
+
+  .bannerContainer {
+    margin-top: -100px;
+
+    .banner {
+      width: 1216px;
+      height: 469px;
+    }
+   
+  }
+
+  .starContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px;
+  
+    .star {
+      display: inline-block;
+      width: 414.5px;
+      height: 99px;
+    }
+  }
+
+
+
+  .content {
+    text-align: center;
+
+    .title1 {
+      margin-top: 201px;
+      display: inline-block;
+
+      .titleOneImage{
+
+      }
+    }
+
+    .paragraph {
+      font-family: "Abel";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      color: #585858;
+    }
+
+    .paragraph1 {
+      margin-top: 60px;
+      margin-bottom: 61px;
+    }
+
+    .paragraph2 {
+      margin-bottom: 58px;
+    }
+
+    .title2 {
+      margin-top: 113px;
+    }
+
+    .paragraph4 {
+      margin-top: 80px;
+    }
+
+    .title3 {
+      margin-top: 24px;
+      margin-bottom: 477px;
+    }
+
+
+  }
+
+
+}
+
+
