@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@babylonjs/core": "^5.5.5",
+    "@babylonjs/gui": "^5.5.5",
     "antd": "^4.20.2",
+    "babylonjs": "^5.5.5",
+    "babylonjs-loaders": "^5.5.5",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0"

@@ -19,7 +19,7 @@ export async function getServerSideProps() {
 
 export default function Home({ allMovies }) {
   return (
-    <div style={{ width: '100vw'}}>
+    <div style={{ width: '100vw' }}>
       <NavBar />
       <Logo />
       <Image
@@ -30,7 +30,7 @@ export default function Home({ allMovies }) {
         alt="getAvatar"
         layout="responsive"
       />
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '116px',marginBottom: '151px'}}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '116px', marginBottom: '151px' }}>
         <Image
           priority
           src={group1}
@@ -50,8 +50,8 @@ export default function Home({ allMovies }) {
         layout="responsive"
       />
 
-      
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '116px',marginBottom: '151px' }}>
+
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '116px', marginBottom: '151px' }}>
         <Image
           priority
           src={group2}
@@ -72,7 +72,7 @@ export default function Home({ allMovies }) {
       />
 
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '116px',marginBottom: '151px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '116px', marginBottom: '151px' }}>
         <Image
           priority
           src={group3}
