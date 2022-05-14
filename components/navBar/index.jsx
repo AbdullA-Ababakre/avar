@@ -27,7 +27,7 @@ const NavBar = () => {
             <Link href="/about">
                 <a className={styles.item}>About US</a>
             </Link>
-            <Search placeholder="input search text" allowClear onSearch={onSearch} style={{ width: 200 }} />
+            {/* <Search placeholder="input search text" allowClear onSearch={onSearch} style={{ width: 200 }} /> */}
             <Image
                 priority
                 src={user}

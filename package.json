@@ -12,6 +12,7 @@
     "@ant-design/icons": "^4.7.0",
     "@babylonjs/core": "^5.5.5",
     "@babylonjs/gui": "^5.5.5",
+    "@nextui-org/react": "^1.0.0-beta.7",
     "antd": "^4.20.2",
     "babylonjs": "^5.5.5",
     "babylonjs-loaders": "^5.5.5",
