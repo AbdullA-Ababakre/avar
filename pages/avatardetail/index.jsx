@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image'
 import styles from './index.module.scss'
 import Footer from '../../components/footer/index'
@@ -13,6 +13,8 @@ import arrowDown from '../../public/images/avatarDetail/arrowDown.png';
 import InsCard from '../../components/instagramCard/index';
 import HomePageCard from '../../components/homePageCard/index';
 import Battle1 from '../../public/images/homePage/homePageCard/Battle1.png';
+import ThreeRender from "../../utils/three-render";
+import WingGlb from '../../public/models/wing.glb';
 
 const item = {
     model: 'wing.glb',
