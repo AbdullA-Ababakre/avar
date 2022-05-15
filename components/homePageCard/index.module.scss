@@ -12,6 +12,18 @@
   margin-right: 30px;
   margin-bottom: 60px;
 
+  .imgWrapper {
+    background-image: url("../../public/images/homePage/homePageCard/background.png");
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    height: 250px;
+
+    .img {
+      display: inline-block;
+    }
+  }
+
 
   .src {
     width: 244px;

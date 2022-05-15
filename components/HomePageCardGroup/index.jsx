@@ -1,23 +1,24 @@
 import styles from './index.module.scss';
 import HomePageCard from '../homePageCard';
-import cardImage from '/public/images/homePage/homePageCard/1.png'
+import Battle1 from '/public/images/homePage/homePageCard/Battle1.png';
 
 
 const HomePageCardGroup = () => {
 
     const cardInfo = [
         {
-            img: cardImage,
+            img: Battle1,
             name: 'New Wave',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Battle Angle',
             author: 'AVAR',
             price: 50,
@@ -27,27 +28,29 @@ const HomePageCardGroup = () => {
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Mermaid Dream',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'New Wave',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Battle Angle',
             author: 'AVAR',
             price: 50,
@@ -57,27 +60,29 @@ const HomePageCardGroup = () => {
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Mermaid Dream',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'New Wave',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Battle Angle',
             author: 'AVAR',
             price: 50,
@@ -87,27 +92,29 @@ const HomePageCardGroup = () => {
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Mermaid Dream',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'New Wave',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Battle Angle',
             author: 'AVAR',
             price: 50,
@@ -117,13 +124,14 @@ const HomePageCardGroup = () => {
             }
         },
         {
-            img: cardImage,
+            img: Battle1,
             name: 'Mermaid Dream',
             author: 'AVAR',
             price: 50,
             status: {
                 isSold: false,
-                progress: '66/88'
+                sold: 66,
+                total: 88
             }
         }
     ]

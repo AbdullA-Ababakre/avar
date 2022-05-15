@@ -1,0 +1,59 @@
+.insCard {
+  width: 360px;
+  //   height: 583px;
+  background: rgba(255, 255, 255, .5);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  border-radius: 20px;
+
+  .head {
+    display: flex;
+    align-items: center;
+
+    .profile {
+      width: 40px;
+      height: 40px;
+    }
+
+    .name {
+      font-family: "Alata";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #444;
+      margin-left: 5px;
+    }
+  }
+
+  .content {
+    margin-top: 2px;
+
+    .profile {
+      Width: 362px;
+      Height: 484px;
+    }
+  }
+
+  .footer {
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 10px;
+    font-family: "Alata";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #8a8a8a;
+
+    .likeNum {
+      margin-right: 5px;
+    }
+  }
+}
+
+.insCard:nth-child(2) {
+  margin-left: 54px;
+  margin-right: 54px;
+}
