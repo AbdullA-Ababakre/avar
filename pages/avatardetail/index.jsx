@@ -15,7 +15,7 @@ import HomePageCard from '../../components/homePageCard/index';
 import Battle1 from '../../public/images/homePage/homePageCard/Battle1.png';
 import ThreeRender from "../../utils/three-render";
 // import WingGlb from '../../public/models/wing.glb';
-import wingGLTF from '../../public/models/cubes.gltf';
+// import wingGLTF from '../../public/models/cubes.gltf';
 
 const item = {
     model: 'wing.glb',
@@ -115,10 +115,10 @@ const cardInfo = [
 
 const About = () => {
 
-    useEffect(() => {
-        const threeRender = new ThreeRender();
-        threeRender.load(wingGLTF);
-    }, []);
+    // useEffect(() => {
+    //     const threeRender = new ThreeRender();
+    //     threeRender.load(wingGLTF);
+    // }, []);
 
     return (
         <div className="">
