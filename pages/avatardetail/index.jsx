@@ -14,7 +14,8 @@ import InsCard from '../../components/instagramCard/index';
 import HomePageCard from '../../components/homePageCard/index';
 import Battle1 from '../../public/images/homePage/homePageCard/Battle1.png';
 import ThreeRender from "../../utils/three-render";
-import WingGlb from '../../public/models/wing.glb';
+// import WingGlb from '../../public/models/wing.glb';
+import wingGLTF from '../../public/models/cubes.gltf';
 
 const item = {
     model: 'wing.glb',
@@ -113,13 +114,19 @@ const cardInfo = [
 ]
 
 const About = () => {
+
+    useEffect(() => {
+        const threeRender = new ThreeRender();
+        threeRender.load(wingGLTF);
+    }, []);
+
     return (
         <div className="">
             <NavBar></NavBar>
             <Logo></Logo>
             <div>
                 <div className={styles.Detail}>
-                    <div id={styles.modelBox}></div>
+                    <div id="modelBox"></div>
                     <div className={styles.modelTextBox}>
                         <div className={styles.title}>
                             <div className={styles.modelName}>{item.name}</div>
