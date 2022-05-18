@@ -2,7 +2,7 @@ import Image from 'next/image'
 import styles from './index.module.scss'
 import Link from 'next/link';
 import facebook from '../../public/images/homePage/share/Facebook.png';
-import Github from '../../public/images/homePage/share/Github.png';
+// import Github from '../../public/images/homePage/share/Github.png';
 import Instagram from '../../public/images/homePage/share/Instagram.png';
 import LinkedIn from '../../public/images/homePage/share/Linkedin.png';
 import Pinterest from '../../public/images/homePage/share/Pinterest.png';
@@ -11,7 +11,7 @@ import Twitter from '../../public/images/homePage/share/Twitter.png';
 
 const Footer = () => {
 
-    const imageArr = [facebook, LinkedIn, Twitter, Pinterest, Instagram, Github];
+    const imageArr = [facebook, LinkedIn, Twitter, Pinterest, Instagram];
     const linkArr = [
         {
             href: '/home',
