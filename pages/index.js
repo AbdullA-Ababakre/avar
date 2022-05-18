@@ -6,12 +6,7 @@ import getAvatar from '/public/images/homePage/getAvatar.png'
 import HomePageCardGroup from '../components/HomePageCardGroup/index';
 
 
-export async function getServerSideProps() {
-  return {
-    props: {
-    },
-  };
-}
+
 
 export default function Home({ allMovies }) {
   return (
