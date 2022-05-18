@@ -1,21 +1,17 @@
 import Link from 'next/link';
 import styles from './index.module.scss'
 import { Input, Space } from 'antd';
-const { Search } = Input;
 import Image from 'next/image'
 import user from '../../public/images/homePage/user.png'
 import card from '../../public/images/homePage/card.png'
 
 const NavBar = () => {
-
-    const onSearch = value => console.log(value);
-
     return (
         <div className={styles.container}>
-            <Link href="/home">
+            <Link href="/">
                 <a className={styles.item}>Home</a>
             </Link>
-            <Link href="/avatar" >
+            {/* <Link href="/avatar" >
                 <a className={styles.item}>Avatar</a>
             </Link>
             <Link href="/fashion">
@@ -23,7 +19,7 @@ const NavBar = () => {
             </Link>
             <Link href="/art">
                 <a className={styles.item}>Digital Art Toy</a>
-            </Link>
+            </Link> */}
             <Link href="/about">
                 <a className={styles.item}>About US</a>
             </Link>

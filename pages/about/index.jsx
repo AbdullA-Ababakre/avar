@@ -8,11 +8,13 @@ import star from '/public/images/homePage/star.png';
 import title1 from '/public/images/about/title1.png';
 import title2 from '/public/images/about/title2.png';
 import title3 from '/public/images/about/title3.png';
-import Footer from '../../components/footer/index'
+import Footer from '../../components/footer/index';
+import NavBar from '../../components/navBar/index';
 
 const About = () => {
   return (
     <div className={styles.container}>
+      <NavBar></NavBar>
       <div className={styles.logoContainer}>
         <Image className={styles.logoLeft} src={logoLeft} alt="logoLeft"></Image>
         <Image className={styles.logoRight} src={logoRight} alt="logoRight"></Image>
@@ -55,7 +57,6 @@ const About = () => {
           <Image className={styles.title3} src={title3} alt="title3" />
         </div>
       </div>
-
       <Footer />
     </div >
   )

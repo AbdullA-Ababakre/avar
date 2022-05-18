@@ -1,10 +1,11 @@
 .container {
   width: 100%;
-  padding: 148px 96px 0;
+
 
   .logoContainer {
     display: flex;
     justify-content: space-between;
+    padding: 10px 96px;
 
     .logoLeft {
       position: absolute;
@@ -23,19 +24,21 @@
 
   .bannerContainer {
     margin-top: -100px;
+    padding: 0 96px;
 
     .banner {
       width: 1216px;
       height: 469px;
     }
-   
+
   }
 
   .starContainer {
     display: flex;
     justify-content: flex-end;
     margin-top: 60px;
-  
+    padding: 0 96px;
+
     .star {
       display: inline-block;
       width: 414.5px;
@@ -47,14 +50,11 @@
 
   .content {
     text-align: center;
+    padding: 0 96px;
 
     .title1 {
-      margin-top: 201px;
+      margin-top: 100px;
       display: inline-block;
-
-      .titleOneImage{
-
-      }
     }
 
     .paragraph {
@@ -86,7 +86,7 @@
 
     .title3 {
       margin-top: 24px;
-      margin-bottom: 477px;
+      margin-bottom: 100px;
     }
 
 
@@ -94,5 +94,3 @@
 
 
 }
-
-
