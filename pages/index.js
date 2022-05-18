@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import NavBar from '../components/NavBar/index';
-import Logo from '../components/Logo/index';
+// import NavBar from '../components/NavBar/index';
+// import Logo from '../components/Logo/index';
 import getAvatar from '/public/images/homePage/getAvatar.png'
-import Footer from '../components/Footer/index';
+// import Footer from '../components/Footer/index';
 import HomePageCardGroup from '../components/HomePageCardGroup/index';
 
 
@@ -16,8 +16,8 @@ export async function getServerSideProps() {
 export default function Home({ allMovies }) {
   return (
     <div style={{ width: '100vw' }}>
-      <NavBar />
-      <Logo />
+      {/* <NavBar />
+      <Logo /> */}
       <Image
         priority
         src={getAvatar}
@@ -27,7 +27,7 @@ export default function Home({ allMovies }) {
         layout="responsive"
       />
       <HomePageCardGroup />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
