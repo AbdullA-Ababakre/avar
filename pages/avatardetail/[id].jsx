@@ -105,13 +105,22 @@ const About = () => {
     return (
         <div className="">
             <NavBar></NavBar>
-            <Logo></Logo>
+            {/* <Logo></Logo> */}
             {
                 item &&
                 (
                     <div>
                         <div className={styles.Detail}>
-                            <div className={styles.modelBox}>hello</div>
+                            <div className={styles.modelBox}>
+                                <Image
+                                    priority
+                                    src={item.img}
+                                    className=""
+                                    style={{ display: 'block', width: '570px', height: '570px' }}
+                                    alt="getAvatar"
+                                    layout="responsive"
+                                />
+                            </div>
                             <div className={styles.modelTextBox}>
                                 <div className={styles.title}>
                                     <div className={styles.modelName}>{item.name}</div>
