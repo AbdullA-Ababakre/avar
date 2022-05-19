@@ -97,10 +97,10 @@ const About = () => {
     const { id } = router.query;
     const [item, setItem] = useState(null);
 
-    // useEffect(() => {
-    //     const threeRender = new ThreeRender();
-    //     threeRender.load(wingGLTF);
-    // }, []);
+    useEffect(() => {
+        const threeRender = new ThreeRender();
+        threeRender.load("/models/cubes.gltf");
+    }, []);
 
     useEffect(() => {
         if (id) {
@@ -134,115 +134,116 @@ const About = () => {
     ];
 
     return (
-        <div className="">
-            <NavBar></NavBar>
-            {/* <Logo></Logo> */}
-            {
-                item &&
-                (
-                    <div>
-                        <div className={styles.Detail}>
-                            <div className={styles.modelBox}>
-                                <Image
-                                    priority
-                                    src={item.img}
-                                    className=""
-                                    style={{ display: 'block', width: '570px', height: '570px' }}
-                                    alt="getAvatar"
-                                    layout="responsive"
-                                />
-                            </div>
-                            <div className={styles.modelTextBox}>
-                                <div className={styles.title}>
-                                    <div className={styles.modelName}>{item.name}</div>
-                                    <div className={styles.author}>{item.author}</div>
-                                </div>
-                                <div className={styles.tagWrapper}>
-                                    {item.tags.map((item, index) => <div key={index} className={styles.tag}># {item}</div>)}
-                                </div>
-                                <div className={styles.horizonLine}></div>
-                                <div className={styles.description}>{item.description}</div>
-                                <div className={styles.horizonLine}></div>
-                                <div className={styles.buyBox}>
-                                    <div className={styles.buy}>
-                                        <div className={styles.price}>${item.price}</div>
-                                        <div className={styles.progress}>
-                                            <div className={styles.resbar} style={{ width: '50%' }}>
-                                                <div className={`${styles.res}  ${styles.resSelling}`}>
-                                                    {(item.status.sold + '/' + item.status.total)}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className={styles.buyBtn}></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.horizonLine}></div>
-                        <div className={styles.imgDetail}>
-                            {item.imgDetail.map((item, index) => {
-                                return (
-                                    <Image key={index} src={item} alt="img" />
-                                )
-                            })}
-                        </div>
-                        <div className={styles.ownership}>
-                            <div className={styles.title}>Ownership</div>
-                            <div className={styles.profiles}>
-                                {
-                                    item.ownership.map((item, index) => <Image className={styles.profile} key={index} src={item.profile} alt="img" />)
-                                }
-                            </div>
-                            <div className={styles.more}><Image width="24px" height="17px" src={arrowDown} alt="arrowDown" /></div>
-                        </div>
-                        <div className={styles.horizonLine}></div>
-                        <div className={styles.instagramCardGroup}>
-                            {
-                                insItem.map((item, index) => <InsCard key={index} />)
-                            }
-                        </div>
-                        <div className={styles.horizonLine}></div>
-                        <div className={styles.homePageCards}>
-                            {
-                                cardInfo.map((item, index) => <HomePageCard style={{ width: '25%' }} key={index} item={item} />)
-                            }
-                        </div>
-                        <Footer></Footer>
-                        {/* <div className={styles.footerContainer}>
-                            <div className={styles.horizontal}></div>
-                            <div className={styles.navBar}>
-                                {
-                                    linkArr.map((item, index) => {
-                                        return (
-                                            <Link href={item.href} key={index}>
-                                                <a className={styles.item}>{item.title}</a>
-                                            </Link>
-                                        )
-                                    })
-                                }
-                            </div>
-                            <div className={styles.horizontal}></div>
-                            <div className={styles.share}>
-                                {
-                                    imageArr.map((item, index) => {
-                                        return (
-                                            <div className={styles.item} key={index}>
-                                                <Image className={styles.icon} src={item} alt={item}></Image>
-                                                {
-                                                    index !== imageArr.length - 1 && <div className={styles.vertical}></div>
-                                                }
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
-                            <div className={styles.horizontal}></div>
-                        </div> */}
-                    </div>
-                )
-            }
+        <div></div>
+        // <div className="">
+        //     <NavBar></NavBar>
+        //     {/* <Logo></Logo> */}
+        //     {
+        //         item &&
+        //         (
+        //             <div>
+        //                 <div className={styles.Detail}>
+        //                     <div className={styles.modelBox}>
+        //                         <Image
+        //                             priority
+        //                             src={item.img}
+        //                             className=""
+        //                             style={{ display: 'block', width: '570px', height: '570px' }}
+        //                             alt="getAvatar"
+        //                             layout="responsive"
+        //                         />
+        //                     </div>
+        //                     <div className={styles.modelTextBox}>
+        //                         <div className={styles.title}>
+        //                             <div className={styles.modelName}>{item.name}</div>
+        //                             <div className={styles.author}>{item.author}</div>
+        //                         </div>
+        //                         <div className={styles.tagWrapper}>
+        //                             {item.tags.map((item, index) => <div key={index} className={styles.tag}># {item}</div>)}
+        //                         </div>
+        //                         <div className={styles.horizonLine}></div>
+        //                         <div className={styles.description}>{item.description}</div>
+        //                         <div className={styles.horizonLine}></div>
+        //                         <div className={styles.buyBox}>
+        //                             <div className={styles.buy}>
+        //                                 <div className={styles.price}>${item.price}</div>
+        //                                 <div className={styles.progress}>
+        //                                     <div className={styles.resbar} style={{ width: '50%' }}>
+        //                                         <div className={`${styles.res}  ${styles.resSelling}`}>
+        //                                             {(item.status.sold + '/' + item.status.total)}
+        //                                         </div>
+        //                                     </div>
+        //                                 </div>
+        //                             </div>
+        //                             <div className={styles.buyBtn}></div>
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //                 <div className={styles.horizonLine}></div>
+        //                 <div className={styles.imgDetail}>
+        //                     {item.imgDetail.map((item, index) => {
+        //                         return (
+        //                             <Image key={index} src={item} alt="img" />
+        //                         )
+        //                     })}
+        //                 </div>
+        //                 <div className={styles.ownership}>
+        //                     <div className={styles.title}>Ownership</div>
+        //                     <div className={styles.profiles}>
+        //                         {
+        //                             item.ownership.map((item, index) => <Image className={styles.profile} key={index} src={item.profile} alt="img" />)
+        //                         }
+        //                     </div>
+        //                     <div className={styles.more}><Image width="24px" height="17px" src={arrowDown} alt="arrowDown" /></div>
+        //                 </div>
+        //                 <div className={styles.horizonLine}></div>
+        //                 <div className={styles.instagramCardGroup}>
+        //                     {
+        //                         insItem.map((item, index) => <InsCard key={index} />)
+        //                     }
+        //                 </div>
+        //                 <div className={styles.horizonLine}></div>
+        //                 <div className={styles.homePageCards}>
+        //                     {
+        //                         cardInfo.map((item, index) => <HomePageCard style={{ width: '25%' }} key={index} item={item} />)
+        //                     }
+        //                 </div>
+        //                 <Footer></Footer>
+        //                 {/* <div className={styles.footerContainer}>
+        //                     <div className={styles.horizontal}></div>
+        //                     <div className={styles.navBar}>
+        //                         {
+        //                             linkArr.map((item, index) => {
+        //                                 return (
+        //                                     <Link href={item.href} key={index}>
+        //                                         <a className={styles.item}>{item.title}</a>
+        //                                     </Link>
+        //                                 )
+        //                             })
+        //                         }
+        //                     </div>
+        //                     <div className={styles.horizontal}></div>
+        //                     <div className={styles.share}>
+        //                         {
+        //                             imageArr.map((item, index) => {
+        //                                 return (
+        //                                     <div className={styles.item} key={index}>
+        //                                         <Image className={styles.icon} src={item} alt={item}></Image>
+        //                                         {
+        //                                             index !== imageArr.length - 1 && <div className={styles.vertical}></div>
+        //                                         }
+        //                                     </div>
+        //                                 )
+        //                             })
+        //                         }
+        //                     </div>
+        //                     <div className={styles.horizontal}></div>
+        //                 </div> */}
+        //             </div>
+        //         )
+        //     }
 
-        </div >
+        // </div >
     )
 }
 export default About;

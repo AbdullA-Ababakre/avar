@@ -105,8 +105,8 @@ class ThreeRender {
     }
 
     // 将模型注入到渲染器中
-    load(resourc_path) {
-        this.loader.load(resourc_path, (data) => {
+    load(resource_path) {
+        this.loader.load(resource_path, (data) => {
             let object = data.scene;
             object.position.set(0, 0, 0);
             this.scene.add(object);
