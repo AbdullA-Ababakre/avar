@@ -1,5 +1,5 @@
 import Battle1 from '../public/images/avatars/Battle/Battle1.png';
-import Battle2 from '../public/images/avatars/Battle/battle2.png';
+import Battle2 from '../public/images/avatars/Battle/Battle2.png';
 import Battle3 from '../public/images/avatars/Battle/Battle3.png';
 // import Wing from '../public/images/avatars/Battle/wing.glb';
 import Covid1 from '../public/images/avatars/Covid/Covid1.png';

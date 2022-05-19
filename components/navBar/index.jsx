@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import styles from './index.module.scss';
-import { Input, Space } from 'antd';
 import Image from 'next/image';
 import user from '../../public/images/homePage/user.png';
 import card from '../../public/images/homePage/card.png';
