@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import styles from './index.module.scss'
-import Footer from '../../components/footer/index'
+import Footer from '../../components/Footer/index'
 import NavBar from '../../components/navBar/index'
 import Logo from '../../components/logo/index';
 import user1 from '../../public/images/homePage/homePageCard/1.png';

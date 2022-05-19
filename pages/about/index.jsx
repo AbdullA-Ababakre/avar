@@ -8,7 +8,7 @@ import star from '/public/images/homePage/star.png';
 import title1 from '/public/images/about/title1.png';
 import title2 from '/public/images/about/title2.png';
 import title3 from '/public/images/about/title3.png';
-import Footer from '../../components/footer/index';
+import Footer from '../../components/Footer/index';
 import NavBar from '../../components/navBar/index';
 
 const About = () => {
