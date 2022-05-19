@@ -1,15 +1,22 @@
 import Link from 'next/link';
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 import { Input, Space } from 'antd';
-import Image from 'next/image'
-import user from '../../public/images/homePage/user.png'
-import card from '../../public/images/homePage/card.png'
+import Image from 'next/image';
+import user from '../../public/images/homePage/user.png';
+import card from '../../public/images/homePage/card.png';
+import logoSmall from '../../public/images/homePage/logoSmall.png';
 
-const NavBar = () => {
-    return (
-        <div className={styles.container}>
+const NavBar = () => (
+    <div className={styles.container}>
+        <div>
+            <Image priority src={logoSmall} className="" height={54} width={169} alt="user" />
+        </div>
+        <div>
             <Link href="/">
                 <a className={styles.item}>Home</a>
+            </Link>
+            <Link href="/about">
+                <a className={styles.item}>About US</a>
             </Link>
             {/* <Link href="/avatar" >
                 <a className={styles.item}>Avatar</a>
@@ -20,27 +27,10 @@ const NavBar = () => {
             <Link href="/art">
                 <a className={styles.item}>Digital Art Toy</a>
             </Link> */}
-            <Link href="/about">
-                <a className={styles.item}>About US</a>
-            </Link>
-            <Image
-                priority
-                src={user}
-                className=""
-                height={42}
-                width={42}
-                alt="user"
-            />
-            <Image
-                priority
-                src={card}
-                className=""
-                height={42}
-                width={42}
-                alt="card"
-            />
+            <Image priority src={user} className="" height={42} width={42} alt="user" />
+            <Image priority src={card} className="" height={42} width={42} alt="card" />
         </div>
-    )
-}
+    </div>
+);
 
 export default NavBar;

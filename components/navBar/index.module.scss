@@ -1,9 +1,8 @@
 .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 94px;
-    margin-top:20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 23px 25px 0 25px;
 
   .item {
     font-family: "Abhaya Libre Medium";
@@ -13,6 +12,9 @@
     line-height: 19px;
     color: #303030;
     margin-right: 8px;
+    vertical-align: center;
+    position: relative;
+    top: -12px;
   }
 
 }

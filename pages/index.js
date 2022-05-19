@@ -10,7 +10,7 @@ export default function Home({ allMovies }) {
   return (
     <div style={{ width: '100vw' }}>
       <NavBar />
-      <Logo />
+      {/* <Logo /> */}
       <Image
         priority
         src={getAvatar}

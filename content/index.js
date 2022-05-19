@@ -26,9 +26,9 @@ import Rocket3 from '../public/images/avatars/Rocket/Rocket3.png';
 import Wave1 from '../public/images/avatars/Wave/Wave1.png';
 import Wave2 from '../public/images/avatars/Wave/Wave2.png';
 import Wave3 from '../public/images/avatars/Wave/Wave3.png';
-import Wing1 from '../public/images/avatars/Wing/Wing1.png';
-import Wing2 from '../public/images/avatars/Wing/Wing2.png';
-import Wing3 from '../public/images/avatars/Wing/Wing3.png';
+import Wing1 from '../public/images/avatars/Wing/wing1.png';
+import Wing2 from '../public/images/avatars/Wing/wing2.png';
+import Wing3 from '../public/images/avatars/Wing/wing3.png';
 import profile from '../public/images/avatarDetail/profile.png';
 
 export const avars = [{
