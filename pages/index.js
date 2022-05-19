@@ -5,42 +5,42 @@ import getAvatar from '/public/images/homePage/getAvatar.png'
 import Footer from '../components/Footer/index';
 import HomePageCardGroup from '../components/HomePageCardGroup/index';
 import Link from 'next/link';
-import facebook from '../../public/images/homePage/share/Facebook.png';
+// import facebook from '../public/images/homePage/share/Facebook.png';
 // import Github from '../../public/images/homePage/share/Github.png';
-import Instagram from '../../public/images/homePage/share/Instagram.png';
-import LinkedIn from '../../public/images/homePage/share/Linkedin.png';
-import Pinterest from '../../public/images/homePage/share/Pinterest.png';
-import Twitter from '../../public/images/homePage/share/Twitter.png';
-import styles from './index.module.scss'
-import user from '../../public/images/homePage/user.png';
-import card from '../../public/images/homePage/card.png';
-import logoSmall from '../../public/images/homePage/logoSmall.png';
+// import Instagram from '../../public/images/homePage/share/Instagram.png';
+// import LinkedIn from '../../public/images/homePage/share/Linkedin.png';
+// import Pinterest from '../../public/images/homePage/share/Pinterest.png';
+// import Twitter from '../../public/images/homePage/share/Twitter.png';
+// import styles from './index.module.scss'
+// import user from '../../public/images/homePage/user.png';
+// import card from '../../public/images/homePage/card.png';
+// import logoSmall from '../../public/images/homePage/logoSmall.png';
 
 
 export default function Home({ allMovies }) {
-  const imageArr = [facebook, LinkedIn, Twitter, Pinterest, Instagram];
-  const linkArr = [
-    {
-      href: '/home',
-      title: 'Home'
-    },
-    {
-      href: '/avatar',
-      title: 'Avatar'
-    },
-    {
-      href: '/fashion',
-      title: 'Digital Fashion'
-    },
-    {
-      href: '/art',
-      title: 'Digital Art Toy'
-    },
-    {
-      href: '/about',
-      title: 'About US'
-    }
-  ];
+  // const imageArr = [facebook, LinkedIn, Twitter, Pinterest, Instagram];
+  // const linkArr = [
+  //   {
+  //     href: '/home',
+  //     title: 'Home'
+  //   },
+  //   {
+  //     href: '/avatar',
+  //     title: 'Avatar'
+  //   },
+  //   {
+  //     href: '/fashion',
+  //     title: 'Digital Fashion'
+  //   },
+  //   {
+  //     href: '/art',
+  //     title: 'Digital Art Toy'
+  //   },
+  //   {
+  //     href: '/about',
+  //     title: 'About US'
+  //   }
+  // ];
 
   return (
     <div style={{ width: '100vw' }}>
