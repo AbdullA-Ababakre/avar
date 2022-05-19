@@ -8,7 +8,7 @@ import star from '/public/images/homePage/star.png';
 import title1 from '/public/images/about/title1.png';
 import title2 from '/public/images/about/title2.png';
 import title3 from '/public/images/about/title3.png';
-// import Footer from '../../components/Footer/index';
+import Footer from '../../components/Footer/index';
 import NavBar from '../../components/navBar/index';
 
 import Link from 'next/link';
@@ -90,8 +90,8 @@ const About = () => {
           <Image className={styles.title3} src={title3} alt="title3" />
         </div>
       </div>
-      {/* <Footer /> */}
-      <div className={styles.container}>
+      <Footer />
+      {/* <div className={styles.container}>
         <div className={styles.horizontal}></div>
         <div className={styles.navBar}>
           {
@@ -120,7 +120,7 @@ const About = () => {
           }
         </div>
         <div className={styles.horizontal}></div>
-      </div>
+      </div> */}
     </div >
   )
 }
