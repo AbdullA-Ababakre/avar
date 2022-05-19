@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import styles from './index.module.scss'
-// import Footer from '../../components/Footer/index';
+import Footer from '../../components/Footer/index';
 import NavBar from '../../components/navBar/index'
 import Logo from '../../components/logo/index';
 import user1 from '../../public/images/homePage/homePageCard/1.png';
@@ -207,8 +207,8 @@ const About = () => {
                                 cardInfo.map((item, index) => <HomePageCard style={{ width: '25%' }} key={index} item={item} />)
                             }
                         </div>
-                        {/* <Footer></Footer> */}
-                        <div className={styles.footerContainer}>
+                        <Footer></Footer>
+                        {/* <div className={styles.footerContainer}>
                             <div className={styles.horizontal}></div>
                             <div className={styles.navBar}>
                                 {
@@ -237,7 +237,7 @@ const About = () => {
                                 }
                             </div>
                             <div className={styles.horizontal}></div>
-                        </div>
+                        </div> */}
                     </div>
                 )
             }
