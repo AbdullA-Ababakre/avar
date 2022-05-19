@@ -1,9 +1,9 @@
 import Image from 'next/image'
-// import NavBar from '../../components/NavBar/index';
+import NavBar from '../components/NavBar/index';
 // import Logo from '../components/Logo/index';
 import getAvatar from '/public/images/homePage/getAvatar.png'
-// import Footer from '../../components/Footer/index';
-import HomePageCardGroup from '../../components/HomePageCardGroup/index';
+import Footer from '../components/Footer/index';
+import HomePageCardGroup from '../components/HomePageCardGroup/index';
 import Link from 'next/link';
 import facebook from '../../public/images/homePage/share/Facebook.png';
 // import Github from '../../public/images/homePage/share/Github.png';
@@ -44,8 +44,9 @@ export default function Home({ allMovies }) {
 
   return (
     <div style={{ width: '100vw' }}>
-      {/* <NavBar /> */}
-      <div className={styles.navbarcontainer}>
+      <NavBar />
+
+      {/* <div className={styles.navbarcontainer}>
         <div>
           <Image priority src={logoSmall} className="" height={54} width={169} alt="user" />
         </div>
@@ -56,7 +57,7 @@ export default function Home({ allMovies }) {
           <Link href="/about">
             <a className={styles.item}>About US</a>
           </Link>
-          {/* <Link href="/avatar" >
+          <Link href="/avatar" >
                 <a className={styles.item}>Avatar</a>
             </Link>
             <Link href="/fashion">
@@ -64,11 +65,12 @@ export default function Home({ allMovies }) {
             </Link>
             <Link href="/art">
                 <a className={styles.item}>Digital Art Toy</a>
-            </Link> */}
+            </Link>
           <Image priority src={user} className="" height={42} width={42} alt="user" />
           <Image priority src={card} className="" height={42} width={42} alt="card" />
         </div>
-      </div>
+      </div> */}
+
       {/* <Logo /> */}
       <Image
         priority
@@ -79,8 +81,8 @@ export default function Home({ allMovies }) {
         layout="responsive"
       />
       <HomePageCardGroup />
-      {/* <Footer /> */}
-      <div className={styles.container}>
+      <Footer />
+      {/* <div className={styles.container}>
         <div className={styles.horizontal}></div>
         <div className={styles.navBar}>
           {
@@ -109,7 +111,7 @@ export default function Home({ allMovies }) {
           }
         </div>
         <div className={styles.horizontal}></div>
-      </div>
+      </div> */}
     </div>
   );
 }
