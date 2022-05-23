@@ -38,7 +38,9 @@ class ThreeRender {
         // 2. 初始化并且设置渲染器
         let renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        let container = document.querySelector('#modelBox');
+        renderer.setSize(container.offsetWidth, container.offsetHeight - 100);
         renderer.setClearColor(backgroundColor); //0x );
 
         renderer.toneMapping = THREE.LinearToneMapping;
@@ -46,22 +48,23 @@ class ThreeRender {
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFShadowMap;
 
+
         // 3. 当网页大小改变的时候，同时也要改变渲染画布的大小
         window.addEventListener(
             "resize",
             function () {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
-                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                let container = document.querySelector('#modelBox');
+                renderer.setSize(container.offsetWidth, container.offsetHeight);
             },
             false
         );
 
         // 4. 将渲染节点放到dom树中
-        // document.body.appendChild(renderer.domElement);
-
         let element = document.querySelector('#modelBox');
-        console.log("element1", element); // 👉️ div#box1
+        element.appendChild(renderer.domElement);
 
 
         function renderScene() {

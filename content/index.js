@@ -1,39 +1,68 @@
-import Battle1 from '../public/images/avatars/Battle/Battle1.png';
-import Battle2 from '../public/images/avatars/Battle/Battle2.png';
-import Battle3 from '../public/images/avatars/Battle/Battle3.png';
-// import Wing from '../public/images/avatars/Battle/wing.glb';
-import Covid1 from '../public/images/avatars/Covid/Covid1.png';
-import Covid2 from '../public/images/avatars/Covid/Covid1.png';
-import Covid3 from '../public/images/avatars/Covid/Covid1.png';
-import Crown1 from '../public/images/avatars/Crown/crown1.png';
-import Crown2 from '../public/images/avatars/Crown/crown2.png';
-import Crown3 from '../public/images/avatars/Crown/crown3.png';
-import Dream1 from '../public/images/avatars/Dream/Dream1.png';
-import Dream2 from '../public/images/avatars/Dream/Dream2.png';
-import Dream3 from '../public/images/avatars/Dream/Dream3.png';
-import Dream4 from '../public/images/avatars/Dream/Dream4.png';
-import Fairy1 from '../public/images/avatars/Fairy/Fairy1.png';
-import Fairy2 from '../public/images/avatars/Fairy/Fairy2.png';
-import Fairy3 from '../public/images/avatars/Fairy/Fairy3.png';
-import Loop1 from '../public/images/avatars/Loop/Loop1.png';
-import Loop2 from '../public/images/avatars/Loop/Loop2.png';
-import Lover1 from '../public/images/avatars/Lover/Lover1.png';
-import Lover2 from '../public/images/avatars/Lover/Lover2.png';
-import Lover3 from '../public/images/avatars/Lover/Lover3.png';
-import Rocket1 from '../public/images/avatars/Rocket/Rocket1.png';
-import Rocket2 from '../public/images/avatars/Rocket/Rocket2.png';
-import Rocket3 from '../public/images/avatars/Rocket/Rocket3.png';
-import Wave1 from '../public/images/avatars/Wave/Wave1.png';
-import Wave2 from '../public/images/avatars/Wave/Wave2.png';
-import Wave3 from '../public/images/avatars/Wave/Wave3.png';
-import Wing1 from '../public/images/avatars/Wing/wing1.png';
-import Wing2 from '../public/images/avatars/Wing/wing2.png';
-import Wing3 from '../public/images/avatars/Wing/wing3.png';
+import battle from '../public/images/avatars/battle/battle.png';
+import battle1 from '../public/images/avatars/battle/Battle1.png';
+import battle2 from '../public/images/avatars/battle/Battle2.png';
+import battle3 from '../public/images/avatars/battle/Battle3.png';
+import boot from '../public/images/avatars/boots/1.png';
+import boot1 from '../public/images/avatars/boots/2.png';
+import boot2 from '../public/images/avatars/boots/3.png';
+import boot3 from '../public/images/avatars/boots/4.png';
+import covid from '../public/images/avatars/covid/Covid1.png';
+import covid1 from '../public/images/avatars/covid/Covid2.png';
+import covid2 from '../public/images/avatars/covid/Covid3.png';
+import crown from '../public/images/avatars/crown/crown1.png';
+import Crown1 from '../public/images/avatars/crown/crown2.png';
+import Crown2 from '../public/images/avatars/crown/crown3.png';
+import dream from '../public/images/avatars/dream/dream.png';
+import dream1 from '../public/images/avatars/dream/Dream1.png';
+import dream2 from '../public/images/avatars/dream/Dream2.png';
+import dream3 from '../public/images/avatars/dream/Dream3.png';
+import dream4 from '../public/images/avatars/dream/Dream4.png';
+
+import heart from '../public/images/avatars/heart/heart.png';
+import heart1 from '../public/images/avatars/heart/2.png';
+import heart2 from '../public/images/avatars/heart/3.png';
+import heart3 from '../public/images/avatars/heart/4.png';
+
+import loop from '../public/images/avatars/loop/1-1.png';
+import loop1 from '../public/images/avatars/loop/1-1.png';
+import loop2 from '../public/images/avatars/loop/1-2.png';
+import loop3 from '../public/images/avatars/loop/1-3.png';
+
+import lover from '../public/images/avatars/lover/lover.png';
+import lover1 from '../public/images/avatars/lover/Lover1.png';
+import lover2 from '../public/images/avatars/lover/Lover2.png';
+import lover3 from '../public/images/avatars/lover/Lover3.png';
+
+import qipaoOne1 from '../public/images/avatars/qipao1/1.png';
+import qipaoOne2 from '../public/images/avatars/qipao1/1.png';
+import qipaoOne3 from '../public/images/avatars/qipao1/2.png';
+import qipaoOne4 from '../public/images/avatars/qipao1/3.png';
+
+import qipaoTwo1 from '../public/images/avatars/qipao2/1.png';
+import qipaoTwo2 from '../public/images/avatars/qipao2/1.png';
+import qipaoTwo3 from '../public/images/avatars/qipao2/2.png';
+import qipaoTwo4 from '../public/images/avatars/qipao2/3.png';
+
+import qipaoThree1 from '../public/images/avatars/qipao3/1.png';
+import qipaoThree2 from '../public/images/avatars/qipao3/1.png';
+import qipaoThree3 from '../public/images/avatars/qipao3/2.png';
+import qipaoThree4 from '../public/images/avatars/qipao3/3.png';
+
+import wave from '../public/images/avatars/wave/wave.png';
+import wave1 from '../public/images/avatars/wave/Wave1.png';
+import wave2 from '../public/images/avatars/wave/Wave2.png';
+import wave3 from '../public/images/avatars/wave/Wave3.png';
+
+import wing from '../public/images/avatars/wing/wing1.png';
+import wing1 from '../public/images/avatars/wing/wing1.png';
+import wing2 from '../public/images/avatars/wing/wing2.png';
+import wing3 from '../public/images/avatars/wing/wing3.png';
+
 import profile from '../public/images/avatarDetail/profile.png';
 
 export const avars = [{
     id: 1,
-    img: Battle1,
+    img: battle,
     name: 'New Wave',
     author: 'AVAR',
     price: 50,
@@ -42,11 +71,11 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/battle/battle.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Battle1, Battle2, Battle3],
+    imgDetail: [battle1, battle2, battle3],
     ownership: [{
         id: '111',
         profile: profile
@@ -69,7 +98,7 @@ export const avars = [{
 },
 {
     id: 2,
-    img: Covid1,
+    img: boot,
     name: 'Battle Angle',
     author: 'AVAR',
     price: 50,
@@ -77,11 +106,11 @@ export const avars = [{
         isSold: true,
         progress: 'Sold Out'
     },
-    // model: Wing,
+    model: '/images/avatars/boots/boots.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Covid1, Covid2, Covid3],
+    imgDetail: [boot1, boot2, boot3],
     ownership: [{
         id: '111',
         profile: profile
@@ -104,7 +133,7 @@ export const avars = [{
 },
 {
     id: 3,
-    img: Crown1,
+    img: covid,
     name: 'Mermaid Dream',
     author: 'AVAR',
     price: 50,
@@ -113,11 +142,11 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/covid/covid.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Crown1, Crown2, Crown3],
+    imgDetail: [covid1, covid2],
     ownership: [{
         id: '111',
         profile: profile
@@ -140,7 +169,7 @@ export const avars = [{
 },
 {
     id: 4,
-    img: Dream1,
+    img: crown,
     name: 'Star Wings',
     author: 'AVAR',
     price: 20,
@@ -149,11 +178,11 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/crown/crown.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Dream1, Dream2, Dream3, Dream4],
+    imgDetail: [Crown1, Crown2],
     ownership: [{
         id: '111',
         profile: profile
@@ -176,7 +205,7 @@ export const avars = [{
 },
 {
     id: 5,
-    img: Fairy1,
+    img: dream,
     name: 'White Lover',
     author: 'AVAR',
     price: 50,
@@ -184,11 +213,11 @@ export const avars = [{
         isSold: true,
         progress: 'Sold Out'
     },
-    // model: Wing,
+    model: '/images/avatars/dream/dream.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Fairy1, Fairy2, Fairy3],
+    imgDetail: [dream1, dream2, dream3, dream4],
     ownership: [{
         id: '111',
         profile: profile
@@ -211,7 +240,7 @@ export const avars = [{
 },
 {
     id: 6,
-    img: Loop1,
+    img: heart,
     name: 'Ice Crown',
     author: 'AVAR',
     price: 25,
@@ -220,11 +249,11 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/heart/heart.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Loop1, Loop2],
+    imgDetail: [heart1, heart2, heart3],
     ownership: [{
         id: '111',
         profile: profile
@@ -247,7 +276,7 @@ export const avars = [{
 },
 {
     id: 7,
-    img: Lover1,
+    img: loop,
     name: 'Covid Bye',
     author: 'AVAR',
     price: 15,
@@ -256,11 +285,11 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/loop/Loop.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Loop1, Loop2],
+    imgDetail: [loop1, loop2, loop3],
     ownership: [{
         id: '111',
         profile: profile
@@ -283,7 +312,7 @@ export const avars = [{
 },
 {
     id: 8,
-    img: Rocket1,
+    img: lover,
     name: 'Metal Qipao',
     author: 'AVAR',
     price: 60,
@@ -292,11 +321,11 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/lover/lover.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Loop1, Loop2],
+    imgDetail: [lover1, lover2, lover3],
     ownership: [{
         id: '111',
         profile: profile
@@ -319,7 +348,7 @@ export const avars = [{
 },
 {
     id: 9,
-    img: Wave1,
+    img: qipaoOne1,
     name: 'Meta Boots',
     author: 'AVAR',
     price: 30,
@@ -328,11 +357,82 @@ export const avars = [{
         sold: 66,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/qipao1/qipao1.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Loop1, Loop2],
+    imgDetail: [qipaoOne2, qipaoOne3, qipaoOne4],
+    ownership: [{
+        id: '111',
+        profile: profile
+    }, {
+        id: '222',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }]
+}, {
+    id: 10,
+    img: qipaoTwo1,
+    name: 'Meta Boots',
+    author: 'AVAR',
+    price: 30,
+    status: {
+        isSold: false,
+        sold: 66,
+        total: 88
+    },
+    model: '/images/avatars/qipao1/qipao1.glb',
+    tags: ['Fashion', 'Dress', '3D', 'AR'],
+    description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
+    price: 50,
+    imgDetail: [qipaoTwo2, qipaoTwo3, qipaoTwo4],
+    ownership: [{
+        id: '111',
+        profile: profile
+    }, {
+        id: '222',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }]
+},
+{
+    id: 9,
+    img: qipaoThree1,
+    name: 'Meta Boots',
+    author: 'AVAR',
+    price: 30,
+    status: {
+        isSold: false,
+        sold: 66,
+        total: 88
+    },
+    model: '/images/avatars/qipao3/qipao3.glb',
+    tags: ['Fashion', 'Dress', '3D', 'AR'],
+    description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
+    price: 50,
+    imgDetail: [qipaoThree2, qipaoThree3, qipaoThree4],
     ownership: [{
         id: '111',
         profile: profile
@@ -355,7 +455,7 @@ export const avars = [{
 },
 {
     id: 10,
-    img: Wing1,
+    img: wing,
     name: 'Line Qipao',
     author: 'AVAR',
     price: 20,
@@ -364,11 +464,11 @@ export const avars = [{
         sold: 48,
         total: 88
     },
-    // model: Wing,
+    model: '/images/avatars/wing/wing.glb',
     tags: ['Fashion', 'Dress', '3D', 'AR'],
     description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
     price: 50,
-    imgDetail: [Loop1, Loop2],
+    imgDetail: [wing1, wing2, wing3],
     ownership: [{
         id: '111',
         profile: profile
@@ -389,4 +489,40 @@ export const avars = [{
         profile: profile
     }]
 },
+{
+    id: 11,
+    img: wave,
+    name: 'Line Qipao',
+    author: 'AVAR',
+    price: 20,
+    status: {
+        isSold: false,
+        sold: 48,
+        total: 88
+    },
+    model: '/images/avatars/wave/wave.glb',
+    tags: ['Fashion', 'Dress', '3D', 'AR'],
+    description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
+    price: 50,
+    imgDetail: [wave1, wave2, wave3],
+    ownership: [{
+        id: '111',
+        profile: profile
+    }, {
+        id: '222',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }, {
+        id: '111',
+        profile: profile
+    }]
+}
 ];

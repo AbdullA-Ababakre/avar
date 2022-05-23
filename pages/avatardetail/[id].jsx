@@ -3,12 +3,6 @@ import Image from 'next/image'
 import styles from './index.module.scss'
 import Footer from '../../components/Footer/index';
 import NavBar from '../../components/NavBar/index';
-import Logo from '../../components/logo/index';
-import user1 from '../../public/images/homePage/homePageCard/1.png';
-import Dream2 from '../../public/images/avatarDetail/Dream2.png';
-import Dream3 from '../../public/images/avatarDetail/Dream3.png';
-import Dream4 from '../../public/images/avatarDetail/Dream4.png';
-import profile from '../../public/images/avatarDetail/profile.png';
 import arrowDown from '../../public/images/avatarDetail/arrowDown.png';
 import InsCard from '../../components/instagramCard/index';
 import HomePageCard from '../../components/homePageCard/index';
@@ -16,13 +10,6 @@ import Battle1 from '../../public/images/homePage/homePageCard/Battle1.png';
 import ThreeRender from "../../utils/three-render";
 import { useRouter } from 'next/router';
 import { avars } from '../../content/index';
-import Link from 'next/link';
-import facebook from '../../public/images/homePage/share/Facebook.png';
-import Instagram from '../../public/images/homePage/share/Instagram.png';
-import LinkedIn from '../../public/images/homePage/share/Linkedin.png';
-import Pinterest from '../../public/images/homePage/share/Pinterest.png';
-import Twitter from '../../public/images/homePage/share/Twitter.png';
-
 
 const insItem = [{
     profile: '',
@@ -95,9 +82,13 @@ const About = () => {
     const [item, setItem] = useState(null);
 
     useEffect(() => {
+        if (!item) {
+            return;
+        }
+
         const threeRender = new ThreeRender();
-        threeRender.load("/models/cubes.gltf");
-    }, []);
+        threeRender.load(item.model);
+    }, [item]);
 
     useEffect(() => {
         if (id) {
@@ -116,14 +107,6 @@ const About = () => {
                     <div>
                         <div className={styles.Detail}>
                             <div id="modelBox" className={styles.modelBox}>
-                                <Image
-                                    priority
-                                    src={item.img}
-                                    className=""
-                                    style={{ display: 'block', width: '570px', height: '570px' }}
-                                    alt="getAvatar"
-                                    layout="responsive"
-                                />
                             </div>
                             <div className={styles.modelTextBox}>
                                 <div className={styles.title}>
