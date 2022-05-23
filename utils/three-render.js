@@ -58,7 +58,11 @@ class ThreeRender {
         );
 
         // 4. 将渲染节点放到dom树中
-        document.body.appendChild(renderer.domElement);
+        // document.body.appendChild(renderer.domElement);
+
+        let element = document.querySelector('#modelBox');
+        console.log("element1", element); // 👉️ div#box1
+
 
         function renderScene() {
             renderer.render(scene, camera);
