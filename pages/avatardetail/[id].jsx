@@ -9,72 +9,7 @@ import HomePageCard from '../../components/homePageCard/index';
 import Battle1 from '../../public/images/homePage/homePageCard/Battle1.png';
 import ThreeRender from "../../utils/three-render";
 import { useRouter } from 'next/router';
-import { avars } from '../../content/index';
-
-const insItem = [{
-    profile: '',
-    name: '',
-    insImg: '',
-    likeNum: 102,
-},
-{
-    profile: '',
-    name: '',
-    insImg: '',
-    likeNum: 102,
-},
-{
-    profile: '',
-    name: '',
-    insImg: '',
-    likeNum: 102,
-}];
-
-const cardInfo = [
-    {
-        img: Battle1,
-        name: 'New Wave',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: false,
-            sold: 66,
-            total: 88
-        }
-    },
-    {
-        img: Battle1,
-        name: 'Battle Angle',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: true,
-            progress: 'Sold Out'
-        }
-    },
-    {
-        img: Battle1,
-        name: 'Mermaid Dream',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: false,
-            sold: 66,
-            total: 88
-        }
-    },
-    {
-        img: Battle1,
-        name: 'Mermaid Dream',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: false,
-            sold: 66,
-            total: 88
-        }
-    }
-]
+import { avars, insItem,cardInfo } from '../../content/index';
 
 const About = () => {
     const router = useRouter()
@@ -154,7 +89,9 @@ const About = () => {
                         <div className={styles.horizonLine}></div>
                         <div className={styles.instagramCardGroup}>
                             {
-                                insItem.map((item, index) => <InsCard key={index} />)
+                                insItem.map((item, index) => <InsCard profile={item.profile} name={item.name} insImg={item.insImg}
+                                    likeNum={item.likeNum}
+                                    key={index} />)
                             }
                         </div>
                         <div className={styles.horizonLine}></div>

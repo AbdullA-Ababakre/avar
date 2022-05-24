@@ -196,13 +196,14 @@
 
 .instagramCardGroup {
   display: flex;
-  padding-left: 120px;
-  padding-right: 120px;
+  justify-content: center;
+  margin:45px 0 87px 0;
 }
 
 .homePageCards {
   display: flex;
-  padding: 0 90px;
+  justify-content: center;
+  margin-top: 80px;
 }
 
 

@@ -96,6 +96,8 @@ export const avars = [{
         profile: profile
     }]
 },
+
+
 {
     id: 2,
     img: boot,
@@ -526,3 +528,140 @@ export const avars = [{
     }]
 }
 ];
+
+
+import insProfileOne from '../public/images/ins/dream1.png';
+import insProfileTwo from '../public/images/ins/dream2.png';
+import insProfileThree from '../public/images/ins/dream3.png';
+import user from '../public/images/avatarDetail/profile.png'
+
+export const insItem = [{
+    profile: user,
+    name: 'song',
+    insImg: insProfileOne,
+    likeNum: 104,
+},
+{
+    profile: user,
+    name: 'April',
+    insImg: insProfileTwo,
+    likeNum: 88,
+},
+{
+    profile: user,
+    name: 'Miamia',
+    insImg: insProfileThree,
+    likeNum: 999,
+}];
+
+
+
+export const cardInfo = [
+    {
+        id: 1,
+        img: battle,
+        name: 'New Wave',
+        author: 'AVAR',
+        price: 50,
+        status: {
+            isSold: false,
+            sold: 66,
+            total: 88
+        },
+        model: '/images/avatars/battle/battle.glb',
+        tags: ['Fashion', 'Dress', '3D', 'AR'],
+        description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
+        price: 50,
+        imgDetail: [battle1, battle2, battle3],
+        ownership: [{
+            id: '111',
+            profile: profile
+        }, {
+            id: '222',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }]
+    },
+    {
+        id: 2,
+        img: boot,
+        name: 'Battle Angle',
+        author: 'AVAR',
+        price: 50,
+        status: {
+            isSold: true,
+            progress: 'Sold Out'
+        },
+        model: '/images/avatars/boots/boots.glb',
+        tags: ['Fashion', 'Dress', '3D', 'AR'],
+        description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
+        price: 50,
+        imgDetail: [boot1, boot2, boot3],
+        ownership: [{
+            id: '111',
+            profile: profile
+        }, {
+            id: '222',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }]
+    },
+    {
+        id: 3,
+        img: covid,
+        name: 'Mermaid Dream',
+        author: 'AVAR',
+        price: 50,
+        status: {
+            isSold: false,
+            sold: 66,
+            total: 88
+        },
+        model: '/images/avatars/covid/covid.glb',
+        tags: ['Fashion', 'Dress', '3D', 'AR'],
+        description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
+        price: 50,
+        imgDetail: [covid1, covid2],
+        ownership: [{
+            id: '111',
+            profile: profile
+        }, {
+            id: '222',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }, {
+            id: '111',
+            profile: profile
+        }]
+    },
+]

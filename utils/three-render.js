@@ -58,6 +58,7 @@ class ThreeRender {
 
                 let container = document.querySelector('#modelBox');
                 renderer.setSize(container.offsetWidth, container.offsetHeight);
+                // renderer.setSize(window.innerWidth, window.innerHeight);
             },
             false
         );
