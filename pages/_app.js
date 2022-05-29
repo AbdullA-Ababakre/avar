@@ -1,19 +1,16 @@
 import '../styles/globals.css'
 import 'antd/dist/antd.css';
 import { NextUIProvider } from '@nextui-org/react';
-import { SessionProvider } from "next-auth/react"
 
 function MyApp({
   Component,
-  pageProps: { session, ...pageProps },
+  pageProps: { ...pageProps },
 }) {
   return (
-    <SessionProvider session={session}>
-      <NextUIProvider>
-        <Component {...pageProps} />
-      </NextUIProvider>
-    </SessionProvider>
+    <NextUIProvider>
+      <Component {...pageProps} />
+    </NextUIProvider>
   );
 }
 
-export default MyApp
+export default MyApp;

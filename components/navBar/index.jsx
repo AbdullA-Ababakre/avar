@@ -4,7 +4,7 @@ import Image from 'next/image';
 import user from '../../public/images/homePage/user.png';
 import card from '../../public/images/homePage/card.png';
 import logoSmall from '../../public/images/homePage/logoSmall.png';
-import { useSession, signIn, signOut } from "next-auth/react";
+// import { useSession, signIn, signOut } from "next-auth/react";
 
 const NavBar = () => (
     <div className={styles.container}>
@@ -27,7 +27,12 @@ const NavBar = () => (
             <Link href="/art">
                 <a className={styles.item}>Digital Art Toy</a>
             </Link> */}
-            <Image priority src={user} className="" height={42} width={42} alt="user" onClick={() => signIn()} />
+            <Link href="/signin" passHref>
+                {/* <a className={styles.item}>Digital Art Toy</a> */}
+                <Image priority src={user} className="" height={42} width={42} alt="user" />
+            </Link>
+
+
             <Image priority src={card} className="" height={42} width={42} alt="card" />
         </div>
     </div>
