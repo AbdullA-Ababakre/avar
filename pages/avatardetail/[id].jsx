@@ -6,7 +6,6 @@ import NavBar from '../../components/NavBar/index';
 import arrowDown from '../../public/images/avatarDetail/arrowDown.png';
 import InsCard from '../../components/instagramCard/index';
 import HomePageCard from '../../components/homePageCard/index';
-import Battle1 from '../../public/images/homePage/homePageCard/Battle1.png';
 import ThreeRender from "../../utils/three-render";
 import { useRouter } from 'next/router';
 import { avars, insItem,cardInfo } from '../../content/index';

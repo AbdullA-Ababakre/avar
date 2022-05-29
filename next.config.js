@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+
     config.module.rules.push({
       test: /\.(gltf)$/,
       use: [
@@ -10,6 +11,13 @@ const nextConfig = {
         }
       ]
     });
+
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+      config.resolve.fallback.dns = false;
+      config.resolve.fallback.net = false;
+      config.resolve.fallback.tls = false;
+    }
 
     // Important: return the modified config
     return config;

@@ -10,7 +10,6 @@ import title2 from '/public/images/about/title2.png';
 import title3 from '/public/images/about/title3.png';
 import Footer from '../../components/Footer/index';
 import NavBar from '../../components/NavBar/index';
-import Link from 'next/link';
 import facebook from '../../public/images/homePage/share/Facebook.png';
 import Instagram from '../../public/images/homePage/share/Instagram.png';
 import LinkedIn from '../../public/images/homePage/share/Linkedin.png';
