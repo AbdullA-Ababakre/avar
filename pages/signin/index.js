@@ -16,13 +16,58 @@ export default function SignIn() {
     });
 
     const signInUser = async () => {
-        e.preventDefault();
-        // return router.push('/');
+        if (email === '' || password === '') {
+            setMessage('请填写所有信息');
+            return;
+        }
+
+        const rawResponse = await fetch('http://edit.atip.top/api/v1/user/login', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        const content = await rawResponse.json();
+        if (content.status === 200) {
+            setMessage('登陆成功');
+            console.log("content1111", content);
+            setTimeout(() => {
+                router.push('/');
+            }, 1000);
+        } else {
+            setMessage(content.message);
+        }
     }
 
 
-    const signUpUser = async (e) => {
-        e.preventDefault();
+    const signUpUser = async () => {
+        if (name === '' || email === '' || password === '') {
+            setMessage('请填写所有信息');
+            return;
+        }
+
+        const rawResponse = await fetch('http://edit.atip.top/api/v1/user/register', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, password })
+        });
+
+        const content = await rawResponse.json();
+        if (content.status === 200) {
+            setMessage('注册成功');
+            setTimeout(() => {
+                router.push('/');
+            }, 1000);
+        } else {
+            setMessage(content.message);
+        }
+
     }
 
     const signUser = () => {
@@ -49,7 +94,7 @@ export default function SignIn() {
 
     return (
         <>
-            <form action="" className={styles.container}>
+            <div className={styles.container}>
                 <div className={styles.box}>
                     <div className={styles.logoImg}>
                         <Image
@@ -61,17 +106,17 @@ export default function SignIn() {
                     </div>
                     {
                         type.typeAction === 'signUp' && (
-                            <input className={`${styles.input} ${styles.nameInput}`} type="name" id="name" name="userName" value={name} onChange={e => setName(e.target.value)} placeholder="Name" />
+                            <input className={`${styles.input} ${styles.nameInput}`} type="name" id="name" name="name" value={name} onChange={e => setName(e.target.value)} placeholder="Name" />
                         )
                     }
                     <input style={{ marginTop: type.typeAction === 'signIn' ? '36px' : '24px' }} className={`${styles.input} ${styles.emailInput}`} type="email" id="email" name="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
                     <input className={`${styles.input} ${styles.passwordInput}`} type="password" id="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
                     <p style={{ color: 'red' }}>{message}</p>
-                    <button className={`${styles.btn} ${styles.signInBtn}`} onClick={(e) => signUser(e)}>{type.typeAction}</button>
+                    <button className={`${styles.btn} ${styles.signInBtn}`} onClick={signUser}>{type.typeAction}</button>
                     <div className={styles.privacy}><span className={styles.privacyText}>隐私政策</span></div>
                     <div className={styles.more}><span className={styles.moreWarning}>还没有Avar账户?</span><span className={styles.moreText} onClick={changeSignType}>{type.typeText}</span></div>
                 </div>
-            </form>
+            </div>
         </>
     )
 }

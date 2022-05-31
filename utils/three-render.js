@@ -9,10 +9,7 @@ class ThreeRender {
     camera = null;
     // 初始化渲染器属性
     constructor() {
-        const backgroundColor = 0x000000;
-
-        /*////////////////////////////////////////*/
-        // 持续更新场景
+        const backgroundColor = 0xcccccc;
         let renderCalls = [];
         function render() {
             requestAnimationFrame(render);
@@ -21,8 +18,6 @@ class ThreeRender {
             });
         }
         render();
-
-        /*////////////////////////////////////////*/
 
         let scene = new THREE.Scene();
 
@@ -33,7 +28,8 @@ class ThreeRender {
             0.1,
             800
         );
-        camera.position.set(5, 5, 5);
+        camera.position.set(-1, -1, -1);
+        // camera.position.set(0, 0, 0);
 
         // 2. 初始化并且设置渲染器
         let renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -41,6 +37,10 @@ class ThreeRender {
 
         let container = document.querySelector('#modelBox');
         renderer.setSize(container.offsetWidth, container.offsetHeight - 100);
+
+        // window上渲染  111
+        // renderer.setSize(document.body.offsetWidth, document.body.offsetHeight);
+
         renderer.setClearColor(backgroundColor); //0x );
 
         renderer.toneMapping = THREE.LinearToneMapping;
@@ -66,6 +66,9 @@ class ThreeRender {
         // 4. 将渲染节点放到dom树中
         let element = document.querySelector('#modelBox');
         element.appendChild(renderer.domElement);
+
+        // window 111
+        // document.body.appendChild(renderer.domElement);
 
 
         function renderScene() {
@@ -106,7 +109,6 @@ class ThreeRender {
         scene.add(light2);
 
         this.loader = new GLTFLoader();
-        this.loader.crossOrigin = true;
         this.render = render;
         this.scene = scene;
         this.camera = camera;
@@ -115,9 +117,17 @@ class ThreeRender {
     // 将模型注入到渲染器中
     load(resource_path) {
         this.loader.load(resource_path, (data) => {
-            let object = data.scene;
-            object.position.set(0, 0, 0);
-            this.scene.add(object);
+            // let object = data.scene;
+            // object.position.set(0, 0, 0);
+            // this.scene.add(object);
+            let model = data.scene;
+            // model.position.set(2, -3, 1);
+            model.position.set(0, -2, 0);
+            model.scale.set(2, 2, 2);
+            this.scene.add(model);
+
+            mixer = new THREE.AnimationMixer(model);
+            mixer.clipAction(data.animations[0]).play();
         });
     }
 }

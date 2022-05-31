@@ -4,7 +4,7 @@ import Image from 'next/image';
 import user from '../../public/images/homePage/user.png';
 import card from '../../public/images/homePage/card.png';
 import logoSmall from '../../public/images/homePage/logoSmall.png';
-// import { useSession, signIn, signOut } from "next-auth/react";
+
 
 const NavBar = () => (
     <div className={styles.container}>
