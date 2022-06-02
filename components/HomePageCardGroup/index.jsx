@@ -4,7 +4,7 @@ import Battle1 from '/public/images/homePage/homePageCard/Battle1.png';
 import { avars } from '../../content/index';
 
 
-const HomePageCardGroup = () => {
+const HomePageCardGroup = ({ avars }) => {
     return (
         <div className={styles.cardGroup}>
             {

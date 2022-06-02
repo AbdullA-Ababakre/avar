@@ -33,7 +33,8 @@ export default function SignIn() {
         const content = await rawResponse.json();
         if (content.status === 200) {
             setMessage('登陆成功');
-            console.log("content1111", content);
+            const token = content.data.token;
+            localStorage.setItem('token', token);
             setTimeout(() => {
                 router.push('/');
             }, 1000);
@@ -61,6 +62,8 @@ export default function SignIn() {
         const content = await rawResponse.json();
         if (content.status === 200) {
             setMessage('注册成功');
+            const token = content.data.token;
+            localStorage.setItem('token', token);
             setTimeout(() => {
                 router.push('/');
             }, 1000);

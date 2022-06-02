@@ -8,28 +8,32 @@ import InsCard from '../../components/instagramCard/index';
 import HomePageCard from '../../components/homePageCard/index';
 import ThreeRender from "../../utils/three-render";
 import { useRouter } from 'next/router';
-import { avars, insItem,cardInfo } from '../../content/index';
+import { avars, insItem, cardInfo } from '../../content/index';
+import { Modal, useModal, Text } from "@nextui-org/react";
+import { fetchGetConvert } from '../../utils/index';
 
-const About = () => {
-    const router = useRouter()
-    const { id } = router.query;
-    const [item, setItem] = useState(null);
+const About = ({ item }) => {
+    console.log("item, ", item);
+    // const router = useRouter();
+    // const { id } = router.query;
+    // const [item, setItem] = useState(null);
+    // const { setVisible, bindings } = useModal();
 
-    useEffect(() => {
-        if (!item) {
-            return;
-        }
+    // useEffect(() => {
+    //     if (!item) {
+    //         return;
+    //     }
 
-        const threeRender = new ThreeRender();
-        threeRender.load(item.model);
-    }, [item]);
+    //     const threeRender = new ThreeRender();
+    //     threeRender.load(item.model);
+    // }, [item]);
 
-    useEffect(() => {
-        if (id) {
-            const item = avars.find(item => item.id === Number(id));
-            setItem(item);
-        }
-    }, [id]);
+    // useEffect(() => {
+    //     if (id) {
+    //         const item = avars.find(item => item.id === Number(id));
+    //         setItem(item);
+    //     }
+    // }, [id]);
 
 
     return (
@@ -40,15 +44,19 @@ const About = () => {
                 (
                     <div>
                         <div className={styles.Detail}>
-                            <div id="modelBox" className={styles.modelBox}>
+                            <div id="modelBox" className={styles.modelBox}
+                            >
                             </div>
                             <div className={styles.modelTextBox}>
                                 <div className={styles.title}>
                                     <div className={styles.modelName}>{item.name}</div>
-                                    <div className={styles.author}>{item.author}</div>
+                                    <div className={styles.author}>
+                                        {/* {item.author} */}
+                                        Avar
+                                    </div>
                                 </div>
                                 <div className={styles.tagWrapper}>
-                                    {item.tags.map((item, index) => <div key={index} className={styles.tag}># {item}</div>)}
+                                    {item.tags && item.tags.length > 0 && item.tags.map((item, index) => <div key={index} className={styles.tag}># {item}</div>)}
                                 </div>
                                 <div className={styles.horizonLine}></div>
                                 <div className={styles.description}>{item.description}</div>
@@ -59,32 +67,61 @@ const About = () => {
                                         <div className={styles.progress}>
                                             <div className={styles.resbar} style={{ width: '50%' }}>
                                                 <div className={`${styles.res}  ${styles.resSelling}`}>
-                                                    {(item.status.sold + '/' + item.status.total)}
+                                                    {(item.sales + '/' + item.count)}
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className={styles.buyBtn}></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div className={styles.horizonLine}></div>
+                            </div >
+                        </div >
+                        <div className={styles.horizonLine} ></div>
                         <div className={styles.imgDetail}>
-                            {item.imgDetail.map((item, index) => {
+                            {item.images && item.images.length > 0 && item.images.map((item, index) => {
                                 return (
-                                    <Image key={index} src={item} alt="img" />
+                                    <div className={styles.imgWraper}>
+                                        <Image
+                                            key={index}
+                                            src={item}
+                                            alt="img"
+                                            layout={"responsive"}
+                                            width="100%"
+                                            height='100%'
+                                        />
+                                    </div>
                                 )
                             })}
                         </div>
-                        <div className={styles.ownership}>
+                        {/* <div className={styles.ownership}>
                             <div className={styles.title}>Ownership</div>
                             <div className={styles.profiles}>
                                 {
-                                    item.ownership.map((item, index) => <Image className={styles.profile} key={index} src={item.profile} alt="img" />)
+                                    item.user && item.user.length > 0 && item.user.map((item, index) => {
+                                        return (
+                                            // <Image
+                                            //     className={styles.profile}
+                                            //     key={index}
+                                            //     src={item.cover}
+                                            //     layout={"responsive"}
+                                            //     width={100}
+                                            //     height={100}
+                                            //     alt="img"
+                                            // />
+                                            <div>hello</div>
+                                        )
+                                    })
                                 }
                             </div>
-                            <div className={styles.more}><Image width="24px" height="17px" src={arrowDown} alt="arrowDown" /></div>
-                        </div>
+                            <div className={styles.more}>
+                                <Image
+                                    width={24}
+                                    height={17}
+                                    src={arrowDown}
+                                    alt="arrowDown"
+                                />
+                            </div>
+                        </div> */}
                         <div className={styles.horizonLine}></div>
                         <div className={styles.instagramCardGroup}>
                             {
@@ -100,10 +137,47 @@ const About = () => {
                             }
                         </div>
                         <Footer></Footer>
-                    </div>
+                    </div >
                 )
             }
         </div >
     )
 }
+
+export async function getStaticPaths() {
+    let params = {
+        created_at: 'desc',
+        count: 'desc',
+        price: 'desc'
+    }
+
+    const url = 'http://edit.atip.top/api/v1/product/list';
+
+    const res = await fetch(fetchGetConvert(url, params)).then(data => data.json()).catch(function (error) { console.log('request failed', error) });
+    const path = res.data.data.map((item) => ({
+        params: { id: item.id.toString() },
+    }));
+
+
+    return {
+        fallback: false,
+        paths: res.data.data.map((item) => ({
+            params: { id: item.id.toString() },
+        })),
+    };
+}
+
+export async function getStaticProps(context) {
+    const id = context.params.id;
+    console.log("id99999", id);
+    const item = await fetch(`http://edit.atip.top/api/v1/product/detail/1?id=${id}`).then(res => res.json());
+    return {
+        props: {
+            item: item.data || {}
+        },
+        revalidate: 1
+    }
+}
+
 export default About;
+

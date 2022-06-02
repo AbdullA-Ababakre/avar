@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-
     config.module.rules.push({
       test: /\.(gltf)$/,
       use: [
@@ -21,6 +20,9 @@ const nextConfig = {
 
     // Important: return the modified config
     return config;
+  },
+  images: {
+    domains: ['placeimg.com', 'images.unsplash.com'],
   },
 }
 

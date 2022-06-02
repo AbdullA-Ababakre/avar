@@ -9,7 +9,8 @@ class ThreeRender {
     camera = null;
     // 初始化渲染器属性
     constructor() {
-        const backgroundColor = 0xcccccc;
+        // const backgroundColor = 0xcccccc;
+        const backgroundColor = 0x000000;
         let renderCalls = [];
         function render() {
             requestAnimationFrame(render);
@@ -35,7 +36,9 @@ class ThreeRender {
         let renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
 
-        let container = document.querySelector('#modelBox');
+        const containerID = '#modelBox';
+
+        let container = document.querySelector(containerID);
         renderer.setSize(container.offsetWidth, container.offsetHeight - 100);
 
         // window上渲染  111
@@ -56,7 +59,7 @@ class ThreeRender {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
 
-                let container = document.querySelector('#modelBox');
+                let container = document.querySelector(containerID);
                 renderer.setSize(container.offsetWidth, container.offsetHeight);
                 // renderer.setSize(window.innerWidth, window.innerHeight);
             },
@@ -64,7 +67,7 @@ class ThreeRender {
         );
 
         // 4. 将渲染节点放到dom树中
-        let element = document.querySelector('#modelBox');
+        let element = document.querySelector(containerID);
         element.appendChild(renderer.domElement);
 
         // window 111
@@ -99,14 +102,37 @@ class ThreeRender {
         /* ////////////////////////////////////////////////////////////////////////// */
 
         // 6. 放置一个点光源
-        let light = new THREE.PointLight(0xffffcc, 20, 200);
-        light.position.set(4, 30, -20);
-        scene.add(light);
+        // let light = new THREE.PointLight(0xffffcc, 20, 200);
+        // light.position.set(4, 30, -20);
+        // scene.add(light);
+
+        // const light = new THREE.AmbientLight(0x404040); // soft white light
+        // scene.add(light);
+
+        // const light = new THREE.SpotLight(0xffa95c, 10,100,100);
+        // light.position.set(50, 50, 50);
+        // light.castShadow = true;
+        // scene.add(light);
+
+        const light1 = new THREE.PointLight(0xFFFFFF, 0.3, 200, 200);
+        light1.name = 'ambient_light';
+        light1.position.set(-50, -50, -50);
+        scene.add(light1)
+
+        const light2 = new THREE.DirectionalLight(0xFFFFFF, 0.8 * Math.PI);
+        light2.position.set(-100, -100, -100); // ~60º
+        light2.name = 'main_light';
+        scene.add(light2);
+
+        var ambientLight = new THREE.AmbientLight(0xFFFFFF, 1); //Add an ambient light to better see the model. More to be discussed on lights later.
+        scene.add(ambientLight); //Add the light to the scene
+
+
 
         // 7. 放置一个环境光源
-        let light2 = new THREE.AmbientLight(0x20202a, 20, 100);
-        light2.position.set(30, -10, 30);
-        scene.add(light2);
+        // let light2 = new THREE.AmbientLight(0x20202a, 20, 100);
+        // light2.position.set(30, -10, 30);
+        // scene.add(light2);
 
         this.loader = new GLTFLoader();
         this.render = render;
@@ -117,15 +143,10 @@ class ThreeRender {
     // 将模型注入到渲染器中
     load(resource_path) {
         this.loader.load(resource_path, (data) => {
-            // let object = data.scene;
-            // object.position.set(0, 0, 0);
-            // this.scene.add(object);
             let model = data.scene;
-            // model.position.set(2, -3, 1);
             model.position.set(0, -2, 0);
             model.scale.set(2, 2, 2);
             this.scene.add(model);
-
             mixer = new THREE.AnimationMixer(model);
             mixer.clipAction(data.animations[0]).play();
         });

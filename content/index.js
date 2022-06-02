@@ -97,8 +97,6 @@ export const avars = [
             profile: profile
         }]
     },
-
-
     {
         id: 2,
         img: boot,
@@ -559,110 +557,119 @@ export const insItem = [{
 
 export const cardInfo = [
     {
-        id: 1,
-        img: battle,
-        name: 'New Wave',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: false,
-            sold: 66,
-            total: 88
-        },
-        model: '/images/avatars/battle/battle.glb',
-        tags: ['Fashion', 'Dress', '3D', 'AR'],
-        description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
-        price: 50,
-        imgDetail: [battle1, battle2, battle3],
-        ownership: [{
-            id: '111',
-            profile: profile
-        }, {
-            id: '222',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }]
+        "id": 22,
+        "user_id": 10,
+        "category_id": 888,
+        "name": "Handmade Concrete Ball",
+        "cover": "http://placeimg.com/640/480/animals",
+        "tags": [
+            "Naira",
+            "Freeway"
+        ],
+        "description": "in",
+        "price": 805,
+        "count": 984,
+        "sales": 205,
+        "images": [
+            "http://placeimg.com/640/480",
+            "http://placeimg.com/640/480"
+        ],
+        "view": 0,
+        "is_on": 1,
+        "is_recommend": 0,
+        "created_at": "2022-06-02 05:32:03",
+        "updated_at": "2022-06-02 05:32:03",
+        "user": {
+            "id": 10,
+            "name": "Destany.Johnson",
+            "avatar_url": ""
+        }
     },
     {
-        id: 2,
-        img: boot,
-        name: 'Battle Angle',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: true,
-            progress: 'Sold Out'
-        },
-        model: '/images/avatars/boots/boots.glb',
-        tags: ['Fashion', 'Dress', '3D', 'AR'],
-        description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
-        price: 50,
-        imgDetail: [boot1, boot2, boot3],
-        ownership: [{
-            id: '111',
-            profile: profile
-        }, {
-            id: '222',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }]
+        "id": 21,
+        "user_id": 10,
+        "category_id": 674,
+        "name": "Generic Granite Pizza",
+        "cover": "http://placeimg.com/640/480/animals",
+        "tags": [
+            "Georgia",
+            "New"
+        ],
+        "description": "Sed praesentium molestiae laborum omnis voluptas.",
+        "price": 221,
+        "count": 979,
+        "sales": 552,
+        "images": [
+            "http://placeimg.com/640/480",
+            "http://placeimg.com/640/480"
+        ],
+        "view": 0,
+        "is_on": 1,
+        "is_recommend": 0,
+        "created_at": "2022-06-02 05:12:20",
+        "updated_at": "2022-06-02 05:12:20",
+        "user": {
+            "id": 10,
+            "name": "Destany.Johnson",
+            "avatar_url": ""
+        }
     },
     {
-        id: 3,
-        img: covid,
-        name: 'Mermaid Dream',
-        author: 'AVAR',
-        price: 50,
-        status: {
-            isSold: false,
-            sold: 66,
-            total: 88
-        },
-        model: '/images/avatars/covid/covid.glb',
-        tags: ['Fashion', 'Dress', '3D', 'AR'],
-        description: 'Just think there are other possibilities in the world. In the metaverse, war, pollution, plague, and warming will no longer exist, and starry space can be as soft as marshmallows, with interesting adventures taking turns, surprises and troubles on the way, each experience can be an exclusive experience, and each creative inspiration can be realized as an out-of-print collection. Time flies, and we have no reason to be trapped in the old reality. The dream-dealing beast sends a pass to AVAR metaverse, saying that in virtual time and space, metal can grow with petals, sea waves can be skirts, crystals can reverse anti-gravity, and you, you can dress in any look you like. ',
-        price: 50,
-        imgDetail: [covid1, covid2],
-        ownership: [{
-            id: '111',
-            profile: profile
-        }, {
-            id: '222',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }, {
-            id: '111',
-            profile: profile
-        }]
+        "id": 20,
+        "user_id": 10,
+        "category_id": 935,
+        "name": "Generic Metal Pants",
+        "cover": "http://placeimg.com/640/480/animals",
+        "tags": [
+            "override",
+            "invoice"
+        ],
+        "description": "odit",
+        "price": 58,
+        "count": 483,
+        "sales": 142,
+        "images": [
+            "http://placeimg.com/640/480",
+            "http://placeimg.com/640/480"
+        ],
+        "view": 0,
+        "is_on": 1,
+        "is_recommend": 0,
+        "created_at": "2022-06-02 05:12:17",
+        "updated_at": "2022-06-02 05:12:17",
+        "user": {
+            "id": 10,
+            "name": "Destany.Johnson",
+            "avatar_url": ""
+        }
     },
+    {
+        "id": 19,
+        "user_id": 10,
+        "category_id": 154,
+        "name": "Generic Frozen Tuna",
+        "cover": "http://placeimg.com/640/480/animals",
+        "tags": [
+            "invoice",
+            "Fiji"
+        ],
+        "description": "Asperiores tenetur porro quo.",
+        "price": 398,
+        "count": 179,
+        "sales": 849,
+        "images": [
+            "http://placeimg.com/640/480",
+            "http://placeimg.com/640/480"
+        ],
+        "view": 0,
+        "is_on": 1,
+        "is_recommend": 0,
+        "created_at": "2022-06-02 05:12:15",
+        "updated_at": "2022-06-02 05:12:15",
+        "user": {
+            "id": 10,
+            "name": "Destany.Johnson",
+            "avatar_url": ""
+        }
+    }
 ]

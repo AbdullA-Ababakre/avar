@@ -6,6 +6,7 @@
     width: 570px;
     height: 570px;
     margin-right: 60px;
+    border: 1px solid red;
   }
 
   .modelTextBox {
@@ -154,8 +155,14 @@
 
 .imgDetail {
   display: flex;
-  padding: 10px 180px 0;
-
+  justify-content: space-around;
+  padding: 52px 0;
+  .imgWraper{
+    width: 454px;
+    height: 454px;
+    max-width: 454px;
+    max-height: 454px;
+  }
 }
 
 .ownership {
