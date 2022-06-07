@@ -12,15 +12,19 @@ const About = ({ item }) => {
     item = avars[0];
 
     useEffect(() => {
+        console.log("item11111");
         if (!item) {
             return;
         }
 
         LoadScript('http://fs3.bimangle.net/js/three-gltf-viewer/gltf-viewer.js', () => {
+            // success
+            // remove loading
             ViewModel('modelBox', 'http://edit.atip.top/uploads/battle.glb');
             document.getElementsByClassName('gui-wrap')[0].remove();
         });
-    }, []);
+        // eslint-disable-next-line no-use-before-define
+    }, [item]);
 
 
     return (
