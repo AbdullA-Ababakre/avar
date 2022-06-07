@@ -23,8 +23,10 @@ const About = ({ item }) => {
             ViewModel('modelBox', 'http://edit.atip.top/uploads/battle.glb');
             document.getElementsByClassName('gui-wrap')[0].remove();
         });
+
         // eslint-disable-next-line no-use-before-define
-    }, [item]);
+        // , [item]
+    });
 
 
     return (
