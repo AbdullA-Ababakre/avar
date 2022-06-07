@@ -3,37 +3,24 @@ import Image from 'next/image'
 import styles from './index.module.scss'
 import Footer from '../../components/Footer/index';
 import NavBar from '../../components/NavBar/index';
-import arrowDown from '../../public/images/avatarDetail/arrowDown.png';
 import InsCard from '../../components/instagramCard/index';
 import HomePageCard from '../../components/homePageCard/index';
-import ThreeRender from "../../utils/three-render";
-import { useRouter } from 'next/router';
 import { avars, insItem, cardInfo } from '../../content/index';
-import { Modal, useModal, Text } from "@nextui-org/react";
-import { fetchGetConvert } from '../../utils/index';
+import { fetchGetConvert, ViewModel, LoadScript } from '../../utils/index';
 
 const About = ({ item }) => {
-    console.log("item, ", item);
-    // const router = useRouter();
-    // const { id } = router.query;
-    // const [item, setItem] = useState(null);
-    // const { setVisible, bindings } = useModal();
+    item = avars[0];
 
-    // useEffect(() => {
-    //     if (!item) {
-    //         return;
-    //     }
+    useEffect(() => {
+        if (!item) {
+            return;
+        }
 
-    //     const threeRender = new ThreeRender();
-    //     threeRender.load(item.model);
-    // }, [item]);
-
-    // useEffect(() => {
-    //     if (id) {
-    //         const item = avars.find(item => item.id === Number(id));
-    //         setItem(item);
-    //     }
-    // }, [id]);
+        LoadScript('http://fs3.bimangle.net/js/three-gltf-viewer/gltf-viewer.js', () => {
+            ViewModel('modelBox', 'http://edit.atip.top/uploads/battle.glb');
+            document.getElementsByClassName('gui-wrap')[0].remove();
+        });
+    }, []);
 
 
     return (
@@ -169,7 +156,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
     const id = context.params.id;
-    console.log("id99999", id);
     const item = await fetch(`http://edit.atip.top/api/v1/product/detail/1?id=${id}`).then(res => res.json());
     return {
         props: {

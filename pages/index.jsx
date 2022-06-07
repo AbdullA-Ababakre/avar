@@ -563,7 +563,8 @@ export default function Home({ data }) {
         async function fetchData() {
             const url = 'http://edit.atip.top/api/v1/product/list';
             const data = await fetch(fetchGetConvert(url, sortCon)).then(data => data.json()).catch(function (error) { console.log('request failed', error) });
-            setAvars(data.data.data);
+            console.log("data",data);
+            // setAvars(data.data.data);
         }
         fetchData();
     }, [sortCon]);
