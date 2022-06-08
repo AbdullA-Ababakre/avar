@@ -22,7 +22,9 @@ const nextConfig = {
     return config;
   },
   images: {
-    domains: ['placeimg.com', 'images.unsplash.com'],
+    domains: ['avarlab.com'],
+    loader: "imgix",
+    path: "",
   },
 }
 
